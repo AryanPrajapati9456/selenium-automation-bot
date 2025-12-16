@@ -82,9 +82,9 @@ Copy code
     "credential": "********"
   }
 ]
+
 📤 Example Output (Sanitized)
 
-json
 [
   {
     "account_id": "ACC_001",
