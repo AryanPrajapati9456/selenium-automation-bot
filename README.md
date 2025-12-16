@@ -62,6 +62,9 @@ selenium-automation-framework/
 ├── masking.py # Identifier masking
 └── logger.py # Structured logging
 
+yaml
+Copy code
+
 ---
 
 ## 📝 Example Input (Sanitized)
@@ -80,8 +83,8 @@ selenium-automation-framework/
   }
 ]
 📤 Example Output (Sanitized)
-
-```json
+json
+Copy code
 [
   {
     "account_id": "ACC_001",
@@ -94,9 +97,7 @@ selenium-automation-framework/
     "status": "IncorrectLogin"
   }
 ]
-
-## ⚡ Performance & Capability
-
+⚡ Performance & Capability
 Feature	Description
 Accounts/hour	~1,900
 Threading	Top-to-bottom & bottom-to-top concurrent execution
@@ -107,8 +108,7 @@ Scalability	Handles 100s–1000s of accounts with minimal configuration
 
 Performance may vary depending on target website responsiveness and rate-limiting.
 
-## ⚙️ Technology Stack
-
+⚙️ Technology Stack
 Python 3.x
 
 Selenium WebDriver
@@ -121,8 +121,7 @@ Explicit waits, DOM validation & JS interaction
 
 Structured logging & masking utilities
 
-## 💡 Why This Project Stands Out
-
+💡 Why This Project Stands Out
 Thread-safe multi-threading for high concurrency
 
 Intelligent retries to avoid rate-limiting penalties
@@ -133,10 +132,9 @@ Safe, masked logging for production
 
 Scalable automation framework demonstrating real-world practices
 
-Perfect for portfolios, professional demonstrations, or client-ready automation projects.
+Perfect for portfolios, professional demonstrations, or client-ready automation projects
 
-## 📌 Usage
-
+📌 Usage
 Configure input.sample.json with sanitized account identifiers
 
 Update config.py for URLs, thread count, retries, and selectors
@@ -147,8 +145,7 @@ Check logs for detailed account processing and statuses
 
 Watch the demo video to see workflow behavior
 
-## 🏆 Summary
-
+🏆 Summary
 This production-ready Selenium automation bot combines:
 
 Powerful automation
