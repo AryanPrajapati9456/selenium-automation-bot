@@ -99,7 +99,8 @@ json
 ]
 ```
 
-⚡ Performance & Capability
+## ⚡ Performance & Capability
+
 Feature	                     Description
 Accounts/hour               ~1,900
 Threading	                  Top-to-bottom & bottom-to-top concurrent execution
@@ -124,7 +125,7 @@ Scalability	Handles         Built to scale from hundreds to tens of thousands of
 
 - Structured logging & masking utilities
 
-##💡 Why This Project Stands Out
+## 💡 Why This Project Stands Out
 
 - Thread-safe multi-threading for high concurrency
 
@@ -150,7 +151,7 @@ Scalability	Handles         Built to scale from hundreds to tens of thousands of
 
 - Watch the demo video to see workflow behavior
 
-##🏆 Summary
+## 🏆 Summary
 
 - This production-ready Selenium automation bot combines:
 
