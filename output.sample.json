@@ -1,0 +1,17 @@
+[
+  {
+    "account_id": "ACC_001",
+    "status": "SUCCESS",
+    "balance": 1240.50
+  },
+  {
+    "account_id": "ACC_002",
+    "status": "FAILED",
+    "error": "Invalid credentials"
+  },
+  {
+    "account_id": "ACC_003",
+    "status": "SUCCESS",
+    "balance": 980.75
+  }
+]

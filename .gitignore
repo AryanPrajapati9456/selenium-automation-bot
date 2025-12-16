@@ -1,0 +1,26 @@
+# Input files with real data
+input.json
+output.json
+
+# Log files
+logs/
+*.log
+
+# Environment files
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# IDE files
+.vscode/
+.idea/
+
+# Browser profiles and data
+*.profile
+*.chrome

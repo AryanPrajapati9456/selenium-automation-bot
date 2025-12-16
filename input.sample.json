@@ -1,0 +1,17 @@
+[
+  {
+    "account_id": "ACC_001",
+    "login_identifier": "USER_001",
+    "credential": "SECRET"
+  },
+  {
+    "account_id": "ACC_002",
+    "login_identifier": "USER_002",
+    "credential": "SECRET"
+  },
+  {
+    "account_id": "ACC_003",
+    "login_identifier": "USER_003",
+    "credential": "SECRET"
+  }
+]
