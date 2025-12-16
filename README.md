@@ -83,8 +83,8 @@ Copy code
   }
 ]
 📤 Example Output (Sanitized)
+
 json
-Copy code
 [
   {
     "account_id": "ACC_001",
@@ -100,64 +100,68 @@ Copy code
 ```
 
 ⚡ Performance & Capability
-Feature	Description
-Accounts/hour	~1,900
-Threading	Top-to-bottom & bottom-to-top concurrent execution
-Error Handling	Login/logout failures, rate-limit events
-Popups	Fast, controlled dismissal
-Data	Balances & status safely extracted
-Scalability	Handles 100s–1000s of accounts with minimal configuration
+Feature	                     Description
+Accounts/hour               ~1,900
+Threading	                  Top-to-bottom & bottom-to-top concurrent execution
+Error Handling	            Login/logout failures, rate-limit events
+Popups	                    Fast, controlled dismissal
+Data	                      Balances & status safely extracted
+Scalability	Handles         Built to scale from hundreds to tens of thousands of accounts, tested with 22,000+ accounts
 
-Performance may vary depending on target website responsiveness and rate-limiting.
+**Performance** may vary depending on target website responsiveness and rate-limiting.
 
-⚙️ Technology Stack
-Python 3.x
+## ⚙️ Technology Stack
 
-Selenium WebDriver
+- Python 3.x
 
-Multi-threading & synchronization
+- Selenium WebDriver
 
-JSON input/output handling
+- Multi-threading & synchronization
 
-Explicit waits, DOM validation & JS interaction
+- JSON input/output handling
 
-Structured logging & masking utilities
+- Explicit waits, DOM validation & JS interaction
 
-💡 Why This Project Stands Out
-Thread-safe multi-threading for high concurrency
+- Structured logging & masking utilities
 
-Intelligent retries to avoid rate-limiting penalties
+##💡 Why This Project Stands Out
 
-Graceful popup handling without disrupting workflow
+- Thread-safe multi-threading for high concurrency
 
-Safe, masked logging for production
+- Intelligent retries to avoid rate-limiting penalties
 
-Scalable automation framework demonstrating real-world practices
+- Graceful popup handling without disrupting workflow
 
-Perfect for portfolios, professional demonstrations, or client-ready automation projects
+- Safe, masked logging for production
 
-📌 Usage
-Configure input.sample.json with sanitized account identifiers
+- Scalable automation framework demonstrating real-world practices
 
-Update config.py for URLs, thread count, retries, and selectors
+- Perfect for portfolios, professional demonstrations, or client-ready automation projects
 
-Run main.py to process accounts and generate output.json
+## 📌 Usage
 
-Check logs for detailed account processing and statuses
+- Configure input.sample.json with sanitized account identifiers
 
-Watch the demo video to see workflow behavior
+- Update config.py for URLs, thread count, retries, and selectors
 
-🏆 Summary
-This production-ready Selenium automation bot combines:
+- Run main.py to process accounts and generate output.json
 
-Powerful automation
+- Check logs for detailed account processing and statuses
 
-High concurrency & throughput
+- Watch the demo video to see workflow behavior
 
-Resilient UI handling
+##🏆 Summary
 
-Safe, masked logging & structured outputs
+- This production-ready Selenium automation bot combines:
 
-Professional-grade architecture ready for deployment
+- Powerful automation
+
+- High concurrency & throughput
+
+- Resilient UI handling
+
+- Safe, masked logging & structured outputs
+
+- Professional-grade architecture ready for deployment
 
 Showcases expertise in high-throughput automation, Python, and Selenium engineering—perfect for portfolios or freelance client work.
