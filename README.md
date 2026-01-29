@@ -1,168 +1,105 @@
 # ⚡ Selenium Automation Bot – High-Throughput Account Workflow
 
-A **professional Selenium automation framework** designed for **efficient, high-volume account workflows**. Handles login, balance extraction, rate-limit detection, popups, and session management with a **multi-threaded, resilient, and scalable architecture**.
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium)
+![Status](https://img.shields.io/badge/Status-Production--Ready-success?style=for-the-badge)
 
-**Throughput:** ~1,900 accounts/hour  
-**Threading:** Top-to-bottom & bottom-to-top concurrent processing  
-**Security:** Masked logs & sanitized input/output
+A **professional-grade Selenium automation framework** engineered for high-volume account management. 
+This bot implements a **multi-threaded bi-directional processing engine** to handle logins, data extraction, and security challenges (popups, rate limits) with human-like resilience.
 
 ---
 
-## 🎯 Overview
+## 🎥 Project Demo
 
-This project demonstrates a **production-grade automation bot** that is:
-
-- **Scalable:** Handles hundreds to thousands of accounts concurrently  
-- **Resilient:** Adapts to UI changes, popups, and rate limits  
-- **Efficient:** Multi-threaded with human-like delays  
-- **Professional:** Structured, maintainable, and ready for real-world deployment  
-
-Ideal for **workflow optimization, testing, or data extraction automation**.
+<!-- 
+    TODO: Upload your demo video or GIF here. 
+    Example: ![Demo](demo.gif) or [Watch Video](link_to_youtube)
+-->
+![Project Demo Placeholder](https://via.placeholder.com/800x400?text=Automation+Bot+Demo+Video+Coming+Soon)
 
 ---
 
 ## 🚀 Key Features
 
-- **Multi-Threaded Engine:** Top-to-bottom & bottom-to-top concurrent processing  
-- **High Throughput:** Processes ~1,900 accounts/hour  
-- **Intelligent Rate-Limit Handling:** Detects “operating too fast” events and adapts dynamically  
-- **Popup & Modal Management:** Fast, controlled dismissal without disrupting workflow  
-- **Robust UI Handling:** Clears inputs, validates DOM, and uses JS clicks for reliability  
-- **Safe Logging:** Masked sensitive identifiers  
-- **Structured Data Output:** Captures balances, login success/failure in JSON  
-- **Configurable:** Centralized URLs, retries, delays, and thread counts  
-- **Human-Like Behavior:** Randomized pauses and input patterns to mimic natural interactions  
+### ⚡ High-Performance Architecture
+- **Bi-Directional Concurrency**: Unique threading strategy processes the account list from both **Top-to-Bottom** and **Bottom-to-Top** simultaneously to maximize throughput (~1,900 accounts/hour).
+- **Scalable Design**: Capable of running hundreds of threads (dependent on hardware) with synchronized index locking.
+
+### 🛡️ Smart Resilience
+- **Rate-Limit Detection**: Automatically detects "operating too fast" warnings and switches to a slow-retry mode to bypass temporary blocks.
+- **Popup Handling**: aggressive `fast_popup_handler` clears unexpected modals instantly using JavaScript injection.
+- **DOM Validation**: Uses `WebDriverWait` and `ExpectedConditions` to ensure stability even on slow connections.
+
+### 🔒 Security & Logging
+- **Masked Logging**: All sensitive data (phone numbers, credentials) is automatically masked in logs (`+91XXXX...`) for safe sharing.
+- **Incognito Mode**: Launches strictly in Incognito/Headless-ready modes to ensure clean sessions.
 
 ---
 
-## 🎥 Demo (Sanitized)
+## 🧩 Project Structure
 
-Video demonstrates:
-
-- Multi-account concurrent execution  
-- Login, balance extraction, and logout workflow  
-- Intelligent rate-limit detection and recovery  
-- Popup handling and structured logging  
-
-> All sensitive data/UI elements are blurred  
-> [Insert demo link here]
-
----
-
-## 🧩 Architecture & Folder Structure
-
-selenium-automation-framework/
-├── main.py # Core bot logic
-├── config.py # Centralized configuration
-├── input.sample.json # Sanitized input format
-├── output.sample.json # Example output
-├── requirements.txt
-└── utils/
-├── interaction.py # Human-like delays & input normalization
-├── masking.py # Identifier masking
-└── logger.py # Structured logging
-
-yaml
-Copy code
-
----
-
-## 📝 Example Input (Sanitized)
-
-```json
-[
-  {
-    "account_id": "ACC_001",
-    "login_identifier": "+91XXXXXXXXXX",
-    "credential": "********"
-  },
-  {
-    "account_id": "ACC_002",
-    "login_identifier": "+91XXXXXXXXXX",
-    "credential": "********"
-  }
-]
-
-📤 Example Output (Sanitized)
-
-[
-  {
-    "account_id": "ACC_001",
-    "balance": 1240.50,
-    "status": "Success"
-  },
-  {
-    "account_id": "ACC_002",
-    "balance": null,
-    "status": "IncorrectLogin"
-  }
-]
+```text
+selenium-automation-bot/
+├── main.py              # 🧠 Core Multi-threaded Engine
+├── config.py            # ⚙️ Centralized Configuration (Selectors, URLs)
+├── utils/
+│   ├── interaction.py   # 🎭 Human-like delays & input sanitization
+│   ├── masking.py       # 🔒 Data masking for logs
+│   └── logger.py        # 📝 Structured logging setup
+├── input.sample.json    # 📄 Input format template
+├── output.sample.json   # 📄 Output format template
+└── requirements.txt     # 📦 Dependencies
 ```
 
-## ⚡ Performance & Capability
+---
 
-Feature	                     Description
-Accounts/hour               ~1,900
-Threading	                  Top-to-bottom & bottom-to-top concurrent execution
-Error Handling	            Login/logout failures, rate-limit events
-Popups	                    Fast, controlled dismissal
-Data	                      Balances & status safely extracted
-Scalability	Handles         Built to scale from hundreds to tens of thousands of accounts, tested with 22,000+ accounts
+## 🛠️ Usage
 
-**Performance** may vary depending on target website responsiveness and rate-limiting.
+1.  **Configure Input**
+    Create an `input.json` file with your account credentials:
+    ```json
+    [
+        {
+            "account_id": "ACC_001",
+            "login_identifier": "user1",
+            "credential": "password123"
+        }
+    ]
+    ```
 
-## ⚙️ Technology Stack
+2.  **Run the Bot**
+    ```bash
+    python main.py
+    ```
 
-- Python 3.x
+3.  **Monitor Output**
+    *   Real-time logs will show progress in the terminal.
+    *   Results are saved incrementally to `output1.json` (Top Bot) and `output2.json` (Bottom Bot).
 
-- Selenium WebDriver
+---
 
-- Multi-threading & synchronization
+## ⚙️ How It Works
 
-- JSON input/output handling
+1.  **Initialization**: Loads `input.json` and splits the workload.
+2.  **Dual-Threading**: 
+    *   `Top-Bot` starts from index 0 `->`
+    *   `Bottom-Bot` starts from end `<-`
+3.  **Processing Loop**:
+    *   **Login**: Enters credentials with human-like typing delays.
+    *   **Balance Check**: Extracts financial data if login succeeds.
+    *   **Logout**: Cleanly ends session to prevent crossover.
+4.  **Completion**: Stops when threads meet in the middle.
 
-- Explicit waits, DOM validation & JS interaction
+---
 
-- Structured logging & masking utilities
+## ⚠️ Ethical Disclaimer
+This software is designed for **educational purposes** and **authorized automation testing**. 
+Users must ensure they have permission to automate interactions with the target platform.
 
-## 💡 Why This Project Stands Out
+---
 
-- Thread-safe multi-threading for high concurrency
+## 👨‍💻 Author
+**Aryan Prajapati**
+*Automation Engineer • Python Developer • Selenium Expert*
 
-- Intelligent retries to avoid rate-limiting penalties
-
-- Graceful popup handling without disrupting workflow
-
-- Safe, masked logging for production
-
-- Scalable automation framework demonstrating real-world practices
-
-- Perfect for portfolios, professional demonstrations, or client-ready automation projects
-
-## 📌 Usage
-
-- Configure input.sample.json with sanitized account identifiers
-
-- Update config.py for URLs, thread count, retries, and selectors
-
-- Run main.py to process accounts and generate output.json
-
-- Check logs for detailed account processing and statuses
-
-- Watch the demo video to see workflow behavior
-
-## 🏆 Summary
-
-- This production-ready Selenium automation bot combines:
-
-- Powerful automation
-
-- High concurrency & throughput
-
-- Resilient UI handling
-
-- Safe, masked logging & structured outputs
-
-- Professional-grade architecture ready for deployment
-
-Showcases expertise in high-throughput automation, Python, and Selenium engineering—perfect for portfolios or freelance client work.
+[![GitHub](https://img.shields.io/badge/GitHub-AryanPrajapati9456-181717?style=flat&logo=github)](https://github.com/AryanPrajapati9456)
